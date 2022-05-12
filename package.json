@@ -1,6 +1,6 @@
 {
   "name": "@elzohery/tickets-common",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a package for shared code between services",
   "main": "./dist/index.js",
   "repository": {
@@ -8,9 +8,6 @@
     "url": "https://github.com/mohamed-elzohery/tickets-common"
   },
   "types": "./dist/index.d.ts",
-  "files": [
-    "./dist/**/*"
-  ],
   "scripts": {
     "build": "tsc -w"
   },
