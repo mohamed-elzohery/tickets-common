@@ -1,0 +1,16 @@
+{
+  "name": "@elzohery/tickets-common",
+  "version": "1.0.0",
+  "description": "a package for shared code between services",
+  "main": "./dist/index.jsindex.js",
+  "types": "./dist/index.d.ts",
+  "files": ["./dist/**/*"],
+  "scripts": {
+    "build": "tsc -w"
+  },
+  "author": "elzohery",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}
