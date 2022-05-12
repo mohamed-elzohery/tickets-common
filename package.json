@@ -3,6 +3,10 @@
   "version": "1.0.5",
   "description": "a package for shared code between services",
   "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohamed-elzohery/tickets-common"
+  },
   "types": "./dist/index.d.ts",
   "files": [
     "./dist/**/*"
