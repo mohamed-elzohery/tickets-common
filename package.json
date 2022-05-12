@@ -1,8 +1,8 @@
 {
   "name": "@elzohery/tickets-common",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a package for shared code between services",
-  "main": "./dist/index.jsindex.js",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "./dist/**/*"
