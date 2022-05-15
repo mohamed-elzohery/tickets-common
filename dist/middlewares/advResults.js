@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.advResults = void 0;
 const adjustRes = (model) => (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     let query;
     //  copy req query
@@ -65,4 +66,4 @@ const adjustRes = (model) => (req, res, next) => __awaiter(void 0, void 0, void 
     };
     next();
 });
-module.exports = adjustRes;
+exports.advResults = adjustRes;

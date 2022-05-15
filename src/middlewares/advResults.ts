@@ -91,4 +91,4 @@ const adjustRes = (model: any) => async(req: QueryReq, res: AdvancedResponse, ne
     next();
 }
 
-module.exports = adjustRes;
+export {adjustRes as advResults};
