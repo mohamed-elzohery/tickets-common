@@ -18,5 +18,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./middlewares/app-error-handler"), exports);
 __exportStar(require("./middlewares/async-error-handler"), exports);
 __exportStar(require("./middlewares/authGuard"), exports);
+__exportStar(require("./middlewares/advResults"), exports);
 // Utils
 __exportStar(require("./utils/ErrorResponse"), exports);
