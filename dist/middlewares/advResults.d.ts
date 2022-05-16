@@ -1,26 +1,3 @@
-import { Request, Response, NextFunction } from 'express';
-interface pagination {
-    next?: {
-        page: number;
-        limit: number;
-    };
-    prev?: {
-        page: number;
-        limit: number;
-    };
-}
-interface AdvancedResponse extends Response {
-    adjustRes: {
-        success: boolean;
-        count: number;
-        pagination: pagination;
-        data: any;
-    };
-}
-interface QueryReq extends Request {
-    query: {
-        [props: string]: any;
-    };
-}
-declare const adjustRes: (model: any) => (req: QueryReq, res: AdvancedResponse, next: NextFunction) => Promise<void>;
+import { Request, NextFunction } from 'express';
+declare const adjustRes: (model: any) => (req: Request, res: any, next: NextFunction) => Promise<void>;
 export { adjustRes as advResults };

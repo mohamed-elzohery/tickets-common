@@ -3,22 +3,9 @@ interface pagination{
     next?: {page: number, limit: number},
     prev?: {page: number, limit: number}
 }
-interface AdvancedResponse extends Response{
-    adjustRes:{
-        success: boolean,
-        count: number,
-        pagination: pagination,
-        data: any
-    }
-}
 
-interface QueryReq extends Request{
-    query: {
-        [props: string]: any
-    }
-}
 
-const adjustRes = (model: any) => async(req: QueryReq, res: AdvancedResponse, next: NextFunction) => {
+const adjustRes = (model: any) => async(req: Request, res: any, next: NextFunction) => {
     let query;
 
     //  copy req query
@@ -42,19 +29,19 @@ const adjustRes = (model: any) => async(req: QueryReq, res: AdvancedResponse, ne
 
     //  select query
     if(req.query.select){
-        const fieldsToShow = req.query.select.split(',').join(' ');
+        const fieldsToShow = (req.query.select as string).split(',').join(' ');
         query = query.select(fieldsToShow);
     }
 
     //  sort query
     if(req.query.sort){
-        const sortByFields = req.query.sort.split(',').join(' ');
+        const sortByFields = (req.query.sort as string).split(',').join(' ');
         query = query.sort(sortByFields);
     }
 
     //  Setting pagination
-    const page = parseInt(req.query.page, 10) || 1;
-    const limit = parseInt(req.query.limit, 10) || 5;
+    const page = parseInt((req.query.page as string), 10) || 1;
+    const limit = parseInt((req.query.limit as string), 10) || 5;
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
     const total = await model.countDocuments();
