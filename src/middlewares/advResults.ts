@@ -12,7 +12,7 @@ interface AdvancedResponse extends Response{
     }
 }
 
-interface QueryReq extends Response{
+interface QueryReq extends Request{
     query: {
         [props: string]: any
     }
