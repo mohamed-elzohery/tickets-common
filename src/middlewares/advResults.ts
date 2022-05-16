@@ -3,9 +3,17 @@ interface pagination{
     next?: {page: number, limit: number},
     prev?: {page: number, limit: number}
 }
+interface AdvancedResponse extends Response{
+    adjustRes?:{
+        success: boolean,
+        count: number,
+        pagination: pagination,
+        data: any
+    }
+}
 
 
-const adjustRes = (model: any) => async(req: Request, res: any, next: NextFunction) => {
+const adjustRes = (model: any) => async(req: Request, res: AdvancedResponse, next: NextFunction) => {
     let query;
 
     //  copy req query
