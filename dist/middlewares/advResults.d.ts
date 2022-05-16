@@ -1,4 +1,4 @@
-import { Response, NextFunction } from 'express';
+import { Request, Response, NextFunction } from 'express';
 interface pagination {
     next?: {
         page: number;
@@ -17,7 +17,7 @@ interface AdvancedResponse extends Response {
         data: any;
     };
 }
-interface QueryReq extends Response {
+interface QueryReq extends Request {
     query: {
         [props: string]: any;
     };
