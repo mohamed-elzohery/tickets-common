@@ -21,3 +21,8 @@ __exportStar(require("./middlewares/authGuard"), exports);
 __exportStar(require("./middlewares/advResults"), exports);
 // Utils
 __exportStar(require("./utils/ErrorResponse"), exports);
+__exportStar(require("./events/base-publisher"), exports);
+__exportStar(require("./events/base-listener"), exports);
+__exportStar(require("./events/ticket-created-event"), exports);
+__exportStar(require("./events/ticket-updated-event"), exports);
+__exportStar(require("./events/Subjects"), exports);
