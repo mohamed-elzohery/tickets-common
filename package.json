@@ -14,6 +14,7 @@
   "author": "elzohery",
   "license": "ISC",
   "devDependencies": {
+    "node-nats-streaming": "^0.3.2",
     "typescript": "^4.6.4"
   },
   "dependencies": {

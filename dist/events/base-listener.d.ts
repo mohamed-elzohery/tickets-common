@@ -11,7 +11,7 @@ export declare abstract class Listener<T extends Event> {
     private client;
     private ackWait;
     constructor(client: Stan);
-    subscripionOptions(): any;
+    subscripionOptions(): import("node-nats-streaming").SubscriptionOptions;
     listen(): void;
     parseMessage(msg: Message): any;
 }
